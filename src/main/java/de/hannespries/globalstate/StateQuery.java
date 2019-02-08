@@ -4,26 +4,58 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class StateQuery {
     public static Map<String, Object> filter(Map<String, List<Object>> filtervalues, Map<String, Object> state){
-        Map<String, Object> result = new HashMap<String, Object>();
-        for (String key : state.keySet()) {
-            if (state.get(key) instanceof Map) {
-                Map subMap = (Map) state.get(key);
-                for(String keyF: filtervalues.keySet()){
-                    if(subMap.containsKey(keyF)){
-                        //simple equals for objects
-                        if(filtervalues.get(keyF).contains(subMap.get(keyF))){
-                            result.put(key, subMap);
+        Map<String, Object> result = new HashMap<>();
+        if(state instanceof ConcurrentHashMap){
+            ConcurrentHashMap cState = (ConcurrentHashMap) state;
+
+            cState.search(Runtime.getRuntime().availableProcessors() - 2, (key, item) -> {
+                if (item instanceof Map) {
+                    Map subMap = (Map) item;
+                    for(String keyF: filtervalues.keySet()){
+                        if(subMap.containsKey(keyF)){
+                            //simple equals for objects
+                            if(filtervalues.get(keyF).contains(subMap.get(keyF))){
+                                result.put(key.toString(), subMap);
+                            }
+                            else{
+                                //using complex filter logic with FilterOperators
+                                for(Object value: filtervalues.get(keyF)){
+                                    if(value instanceof FilterOperator){
+                                        FilterOperator op = (FilterOperator) value;
+                                        if(op.check(subMap.get(keyF))){
+                                            result.put(key.toString(), subMap);
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        else{
-                            //using complex filter logic with FilterOperators
-                            for(Object value: filtervalues.get(keyF)){
-                                if(value instanceof FilterOperator){
-                                    FilterOperator op = (FilterOperator) value;
-                                    if(op.check(subMap.get(keyF))){
-                                        result.put(key, subMap);
+                    }
+                }
+                return null;
+            });
+        }
+        else {
+            for (String key : state.keySet()) {
+                if (state.get(key) instanceof Map) {
+                    Map subMap = (Map) state.get(key);
+                    for(String keyF: filtervalues.keySet()){
+                        if(subMap.containsKey(keyF)){
+                            //simple equals for objects
+                            if(filtervalues.get(keyF).contains(subMap.get(keyF))){
+                                result.put(key, subMap);
+                            }
+                            else{
+                                //using complex filter logic with FilterOperators
+                                for(Object value: filtervalues.get(keyF)){
+                                    if(value instanceof FilterOperator){
+                                        FilterOperator op = (FilterOperator) value;
+                                        if(op.check(subMap.get(keyF))){
+                                            result.put(key, subMap);
+                                        }
                                     }
                                 }
                             }
@@ -36,7 +68,7 @@ public class StateQuery {
     }
 
     public static Map<String, Object> filterByIds(List<String> ids, Map<String, Object> state){
-        Map<String, Object> result = new HashMap<String, Object>();
+        Map<String, Object> result = new HashMap<>();
         for (String key : state.keySet()) {
             if (ids.contains(key)) {
                 result.put(key, state.get(key));
@@ -46,7 +78,7 @@ public class StateQuery {
     }
 
     public static Map<String, Object> filterById(String id, Map<String, Object> state){
-        List<String> ids = new ArrayList<String>();
+        List<String> ids = new ArrayList<>();
         ids.add(id);
         return filterByIds(ids, state);
     }

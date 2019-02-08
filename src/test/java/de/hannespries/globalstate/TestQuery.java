@@ -4,12 +4,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class TestQuery {
     @Test
     public void exists(){
-        Map<String, Object> state = new HashMap<String, Object>();
-        Map<String, Object> artefact = new HashMap<String, Object>();
+        Map<String, Object> state = new HashMap<>();
+        Map<String, Object> artefact = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
         artefact.put("__id", id);
@@ -20,8 +21,8 @@ public class TestQuery {
 
     @Test
     public void findById(){
-        Map<String, Object> state = new HashMap<String, Object>();
-        Map<String, Object> artefact = new HashMap<String, Object>();
+        Map<String, Object> state = new HashMap<>();
+        Map<String, Object> artefact = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
         artefact.put("__id", id);
@@ -35,8 +36,8 @@ public class TestQuery {
 
     @Test
     public void mergeAdd(){
-        Map<String, Object> state = new HashMap<String, Object>();
-        Map<String, Object> artefact = new HashMap<String, Object>();
+        Map<String, Object> state = new HashMap<>();
+        Map<String, Object> artefact = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
         artefact.put("__id", id);
@@ -49,9 +50,9 @@ public class TestQuery {
 
     @Test
     public void mergeUpdate(){
-        Map<String, Object> state = new HashMap<String, Object>();
-        Map<String, Object> artefact = new HashMap<String, Object>();
-        Map<String, Object> artefact2 = new HashMap<String, Object>();
+        Map<String, Object> state = new HashMap<>();
+        Map<String, Object> artefact = new HashMap<>();
+        Map<String, Object> artefact2 = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
         artefact.put("__id", id);
@@ -71,9 +72,9 @@ public class TestQuery {
 
     @Test
     public void filterSingle(){
-        Map<String, Object> state = new HashMap<String, Object>();
-        Map<String, Object> artefact = new HashMap<String, Object>();
-        Map<String, Object> artefact2 = new HashMap<String, Object>();
+        Map<String, Object> state = new HashMap<>();
+        Map<String, Object> artefact = new HashMap<>();
+        Map<String, Object> artefact2 = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
         artefact.put("__id", id);
@@ -82,8 +83,8 @@ public class TestQuery {
         StateQuery.merge(id, artefact, state);
         StateQuery.merge(id + "xxx", artefact2, state);
 
-        Map<String, List<Object>> filter = new HashMap<String, List<Object>>();
-        List<Object> values = new ArrayList<Object>();
+        Map<String, List<Object>> filter = new HashMap<>();
+        List<Object> values = new ArrayList<>();
         values.add(id + "xxx");
         filter.put("__id", values);
 
@@ -95,10 +96,39 @@ public class TestQuery {
     }
 
     @Test
+    public void filterSingle2(){
+        Map<String, Object> state = new ConcurrentHashMap<>();
+        Map<String, Object> artefact = new HashMap<>();
+
+        String id = UUID.randomUUID().toString();
+        artefact.put("__id", id + "xxx");
+
+        StateQuery.merge(id + "xxx", artefact, state);
+
+        for(int i = 0; i < 2500; i++){
+            Map<String, Object> art = new HashMap<>();
+            String artId = "zzz" + i;
+            art.put("__id", artId);
+            StateQuery.merge(artId, art, state);
+        }
+
+        Map<String, List<Object>> filter = new HashMap<>();
+        List<Object> values = new ArrayList<>();
+        values.add(id + "xxx");
+        filter.put("__id", values);
+
+        Map<String, Object> result = StateQuery.filter(filter, state);
+
+        Assert.assertTrue(result.containsKey(id + "xxx"));
+        Assert.assertEquals(1, result.size());
+        Assert.assertEquals(artefact, result.get(id + "xxx"));
+    }
+
+    @Test
     public void filterBoth(){
-        Map<String, Object> state = new HashMap<String, Object>();
-        Map<String, Object> artefact = new HashMap<String, Object>();
-        Map<String, Object> artefact2 = new HashMap<String, Object>();
+        Map<String, Object> state = new HashMap<>();
+        Map<String, Object> artefact = new HashMap<>();
+        Map<String, Object> artefact2 = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
         artefact.put("__id", id);
@@ -107,8 +137,8 @@ public class TestQuery {
         StateQuery.merge(id, artefact, state);
         StateQuery.merge(id + "xxx", artefact2, state);
 
-        Map<String, List<Object>> filter = new HashMap<String, List<Object>>();
-        List<Object> values = new ArrayList<Object>();
+        Map<String, List<Object>> filter = new HashMap<>();
+        List<Object> values = new ArrayList<>();
         values.add(id);
         values.add(id + "xxx");
         filter.put("__id", values);
@@ -123,9 +153,9 @@ public class TestQuery {
 
     @Test
     public void delete(){
-        Map<String, Object> state = new HashMap<String, Object>();
-        Map<String, Object> artefact = new HashMap<String, Object>();
-        Map<String, Object> artefact2 = new HashMap<String, Object>();
+        Map<String, Object> state = new HashMap<>();
+        Map<String, Object> artefact = new HashMap<>();
+        Map<String, Object> artefact2 = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
         artefact.put("__id", id);
@@ -134,8 +164,8 @@ public class TestQuery {
         StateQuery.merge(id, artefact, state);
         StateQuery.merge(id + "xxx", artefact2, state);
 
-        Map<String, List<Object>> filter = new HashMap<String, List<Object>>();
-        List<Object> values = new ArrayList<Object>();
+        Map<String, List<Object>> filter = new HashMap<>();
+        List<Object> values = new ArrayList<>();
         values.add(id);
         values.add(id + "xxx");
         filter.put("__id", values);
