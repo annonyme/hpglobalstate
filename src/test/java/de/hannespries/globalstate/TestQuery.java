@@ -1,5 +1,6 @@
 package de.hannespries.globalstate;
 
+import de.hannespries.globalstate.defaults.filters.FieldExists;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -116,6 +117,36 @@ public class TestQuery {
         List<Object> values = new ArrayList<>();
         values.add(id + "xxx");
         filter.put("__id", values);
+
+        Map<String, Object> result = StateQuery.filter(filter, state);
+
+        Assert.assertTrue(result.containsKey(id + "xxx"));
+        Assert.assertEquals(1, result.size());
+        Assert.assertEquals(artefact, result.get(id + "xxx"));
+    }
+
+    @Test
+    public void filterSingleFieldExists(){
+        Map<String, Object> state = new ConcurrentHashMap<>();
+        Map<String, Object> artefact = new HashMap<>();
+
+        String id = UUID.randomUUID().toString();
+        artefact.put("__id", id + "xxx");
+        artefact.put("fieldX", "X");
+
+        StateQuery.merge(id + "xxx", artefact, state);
+
+        for(int i = 0; i < 2500; i++){
+            Map<String, Object> art = new HashMap<>();
+            String artId = "zzz" + i;
+            art.put("__id", artId);
+            StateQuery.merge(artId, art, state);
+        }
+
+        Map<String, List<Object>> filter = new HashMap<>();
+        List<Object> values = new ArrayList<>();
+        values.add(new FieldExists());
+        filter.put("fieldX", values);
 
         Map<String, Object> result = StateQuery.filter(filter, state);
 
