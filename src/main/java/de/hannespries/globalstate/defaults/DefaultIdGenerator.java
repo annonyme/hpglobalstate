@@ -12,6 +12,6 @@ public class DefaultIdGenerator implements IdGenerator {
     }
 
     public boolean validateId(String id, Action action, Map<String, Object> state) {
-        return id != null && id.length() > 0 && state.containsKey(id);
+        return id != null && id.length() > 0;
     }
 }
