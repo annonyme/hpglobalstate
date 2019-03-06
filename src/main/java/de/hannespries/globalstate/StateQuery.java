@@ -9,6 +9,13 @@ import java.util.concurrent.ConcurrentHashMap;
 public class StateQuery {
     public static Map<String, Object> filter(Map<String, List<Object>> filtervalues, Map<String, Object> state){
         Map<String, Object> result = new HashMap<>();
+        Map<String, Float> relevances = new HashMap<>(); //key + 0-1 for relevance //TODO ????? or do it another way
+
+
+        //TODO
+        //loop through filtervalues.. get field-value by state 1st-level field to hold multithreading-logic
+        //if not ConcurrentHashMap.. use state as 1st level input for field resolving
+
         if(state instanceof ConcurrentHashMap){
             ConcurrentHashMap cState = (ConcurrentHashMap) state;
 
@@ -19,7 +26,7 @@ public class StateQuery {
                         if(subMap.containsKey(keyF)){
                             //simple equals for objects
                             if(filtervalues.get(keyF).contains(subMap.get(keyF))){
-                                result.put(key.toString(), subMap);
+                                result.put(key.toString(), subMap); //TODO ????? count relevance
                             }
                             else{
                                 //using complex filter logic with FilterOperators
@@ -27,7 +34,7 @@ public class StateQuery {
                                     if(value instanceof FilterOperator){
                                         FilterOperator op = (FilterOperator) value;
                                         if(op.check(subMap.get(keyF))){
-                                            result.put(key.toString(), subMap);
+                                            result.put(key.toString(), subMap); //TODO ????? count relevance
                                         }
                                     }
                                 }
@@ -46,7 +53,7 @@ public class StateQuery {
                         if(subMap.containsKey(keyF)){
                             //simple equals for objects
                             if(filtervalues.get(keyF).contains(subMap.get(keyF))){
-                                result.put(key, subMap);
+                                result.put(key, subMap); //TODO ????? count relevance
                             }
                             else{
                                 //using complex filter logic with FilterOperators
@@ -54,7 +61,7 @@ public class StateQuery {
                                     if(value instanceof FilterOperator){
                                         FilterOperator op = (FilterOperator) value;
                                         if(op.check(subMap.get(keyF))){
-                                            result.put(key, subMap);
+                                            result.put(key, subMap); //TODO ????? count relevance
                                         }
                                     }
                                 }
@@ -64,6 +71,9 @@ public class StateQuery {
                 }
             }
         }
+
+        //TODO ????? compose the final list from relevances
+
         return result;
     }
 
@@ -83,8 +93,8 @@ public class StateQuery {
         return filterByIds(ids, state);
     }
 
-    public static void merge(String id, Map<String, Object> artefact, Map<String, Object> state){
-        state.put(id, artefact);
+    public static void merge(String id, Map<String, Object> artifact, Map<String, Object> state){
+        state.put(id, artifact);
     }
 
     public static void merge(Action action,  Map<String, Object> state){
