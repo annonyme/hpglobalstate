@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c856072e-4ef3-42bc-a37d-c003be2cf5af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestQuery.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="305">
@@ -34,6 +34,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -106,7 +115,6 @@
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/RegExMatch.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/IsNullOrEmpty.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/NotNullOrEmpty.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectReaderException.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/utils/TestValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathWriter.java" />
@@ -114,6 +122,7 @@
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestQuery.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -253,7 +262,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551983730828" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551983805962" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../fm-server" />
     <property name="project.structure.last.edited" value="Project" />
@@ -378,9 +387,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestObjects_readSimpleObject - 2019.03.07 at 12h 28m 21s.xml">
-      <configuration name="TestObjects.readSimpleObject" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestObjects_readSimpleObject - 2019.03.07 at 12h 29m 25s.xml">
       <configuration name="TestObjects.readSimpleObject" configurationId="JUnit" />
     </history-entry>
@@ -408,12 +414,16 @@
     <history-entry file="TestQuery_filterSingleFieldExists - 2019.03.07 at 14h 14m 58s.xml">
       <configuration name="TestQuery.filterSingleFieldExists" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_hp-globalstate-core - 2019.03.07 at 19h 35m 48s.xml">
+      <configuration name="All in hp-globalstate-core" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="3361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20842217" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -424,7 +434,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286424" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900663" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -701,13 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13-beta-1/junit-4.13-beta-1.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -786,6 +789,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>
