@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class ObjectPathReader {
     public static Object read(Object parent, String path) throws ObjectReaderException{
-        String[] pathList = path.split(".");
+        String[] pathList = path.split("\\.");
         return read(parent, pathList, 0);
     }
 
@@ -18,6 +18,9 @@ public class ObjectPathReader {
             Map parentMap = (Map) parent;
             if(parentMap.containsKey(path[index])){
                 result = parentMap.get(path[index]);
+            }
+            else {
+                throw new ObjectReaderException("key not exists");
             }
         }
         else if(path[index].endsWith("()")){
@@ -35,7 +38,7 @@ public class ObjectPathReader {
         }
         else {
             try{
-                Field field = parent.getClass().getField(path[index]);
+                Field field = parent.getClass().getDeclaredField(path[index]);
                 field.setAccessible(true);
                 result = field.get(parent);
             }

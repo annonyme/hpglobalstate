@@ -44,7 +44,7 @@ public class ObjectPathWriter {
         }
         else {
             try{
-                Field field = parent.getClass().getField(path[index]);
+                Field field = parent.getClass().getDeclaredField(path[index]);
                 field.setAccessible(true);
                 if(!isLastInPath){
                     result = field.get(parent);

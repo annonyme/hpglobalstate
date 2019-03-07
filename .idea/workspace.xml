@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c856072e-4ef3-42bc-a37d-c003be2cf5af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectReaderException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestObjects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/utils/TestValue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathWriter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,81 +23,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/IsNullOrEmpty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="225">
+              <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="678">
-              <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectReaderException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="34" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="34" />
-              <folding>
-                <element signature="e#142#143#0" expanded="true" />
-                <element signature="e#160#161#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/JWTIdGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="29" column="92" selection-start-line="29" selection-start-column="92" selection-end-line="29" selection-end-column="92" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/FieldExists.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
-              <folding>
-                <element signature="e#215#216#0" expanded="true" />
-                <element signature="e#242#243#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2108">
-              <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="62" />
+            <state relative-caret-position="305">
+              <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,10 +44,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestState.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="58" />
+            <state relative-caret-position="336">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5853#5854#0" expanded="true" />
+                <element signature="e#5908#5909#0" expanded="true" />
+                <element signature="e#5981#5982#0" expanded="true" />
+                <element signature="e#6025#6026#0" expanded="true" />
+                <element signature="e#6102#6103#0" expanded="true" />
+                <element signature="e#6157#6158#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,7 +101,6 @@
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/IdGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/DefaultIdGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/MapTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/GlobalState.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/DefaultFacetFilterByToken.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/FieldExists.java" />
@@ -151,7 +111,6 @@
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/JWTIdGenerator.java" />
         <option value="$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestIdGen.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/server/Scope.java" />
-        <option value="$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/MinMaxStringLen.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/GreaterThan.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/LesserThan.java" />
@@ -163,8 +122,12 @@
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/NotNullOrEmpty.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectReaderException.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/utils/TestValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathWriter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestObjects.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestQuery.java" />
       </list>
     </option>
   </component>
@@ -191,11 +154,13 @@
       <select />
     </treeState>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="25" />
+    <option name="width" value="2560" />
+    <option name="height" value="1362" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -294,6 +259,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="globalstate" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="hpglobalstate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hpglobalstate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="globalstate" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -303,7 +277,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551901784794" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551964506808" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../fm-server" />
     <property name="project.structure.last.edited" value="Project" />
@@ -328,9 +302,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestState.sendAction">
-    <configuration name="TestIdGen.ceateJWT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hpglobalstate" />
+  <component name="RunManager" selected="JUnit.TestQuery.filterSingleFieldExists">
+    <configuration name="All in hp-globalstate-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hp-globalstate-core" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestObjects.readComplexObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hp-globalstate-core" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="de.hannespries.globalstate.*" />
@@ -338,15 +320,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="de.hannespries.globalstate" />
-      <option name="MAIN_CLASS_NAME" value="de.hannespries.globalstate.TestIdGen" />
-      <option name="METHOD_NAME" value="ceateJWT" />
+      <option name="MAIN_CLASS_NAME" value="de.hannespries.globalstate.TestObjects" />
+      <option name="METHOD_NAME" value="readComplexObject" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestIdGen.validateJWT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hpglobalstate" />
+    <configuration name="TestObjects.readComplexObjectGetter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hp-globalstate-core" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="de.hannespries.globalstate.*" />
@@ -354,15 +336,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="de.hannespries.globalstate" />
-      <option name="MAIN_CLASS_NAME" value="de.hannespries.globalstate.TestIdGen" />
-      <option name="METHOD_NAME" value="validateJWT" />
+      <option name="MAIN_CLASS_NAME" value="de.hannespries.globalstate.TestObjects" />
+      <option name="METHOD_NAME" value="readComplexObjectGetter" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestIdGen.validateJWTFailing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hpglobalstate" />
+    <configuration name="TestObjects.readSimpleObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hp-globalstate-core" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="de.hannespries.globalstate.*" />
@@ -370,15 +352,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="de.hannespries.globalstate" />
-      <option name="MAIN_CLASS_NAME" value="de.hannespries.globalstate.TestIdGen" />
-      <option name="METHOD_NAME" value="validateJWTFailing" />
+      <option name="MAIN_CLASS_NAME" value="de.hannespries.globalstate.TestObjects" />
+      <option name="METHOD_NAME" value="readSimpleObject" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="TestQuery.filterSingleFieldExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hpglobalstate" />
+      <module name="hp-globalstate-core" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="de.hannespries.globalstate.*" />
@@ -393,29 +375,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestState.sendAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hpglobalstate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.hannespries.globalstate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.hannespries.globalstate" />
-      <option name="MAIN_CLASS_NAME" value="de.hannespries.globalstate.TestState" />
-      <option name="METHOD_NAME" value="sendAction" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestState.sendAction" />
         <item itemvalue="JUnit.TestQuery.filterSingleFieldExists" />
-        <item itemvalue="JUnit.TestIdGen.validateJWT" />
-        <item itemvalue="JUnit.TestIdGen.validateJWTFailing" />
-        <item itemvalue="JUnit.TestIdGen.ceateJWT" />
+        <item itemvalue="JUnit.All in hp-globalstate-core" />
+        <item itemvalue="JUnit.TestObjects.readComplexObjectGetter" />
+        <item itemvalue="JUnit.TestObjects.readComplexObject" />
+        <item itemvalue="JUnit.TestObjects.readSimpleObject" />
       </list>
     </recent_temporary>
   </component>
@@ -433,68 +399,92 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestQuery_filterSingle2 - 2019.02.08 at 18h 39m 38s.xml">
-      <configuration name="TestQuery.filterSingle2" configurationId="JUnit" />
+    <history-entry file="TestObjects_readSimpleObject - 2019.03.07 at 12h 28m 21s.xml">
+      <configuration name="TestObjects.readSimpleObject" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_hpglobalstate - 2019.02.08 at 19h 27m 17s.xml">
-      <configuration name="All in hpglobalstate" configurationId="JUnit" />
+    <history-entry file="TestObjects_readSimpleObject - 2019.03.07 at 12h 29m 25s.xml">
+      <configuration name="TestObjects.readSimpleObject" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestIdGen_ceateJWT - 2019.02.09 at 19h 25m 29s.xml">
-      <configuration name="TestIdGen.ceateJWT" configurationId="JUnit" />
+    <history-entry file="TestObjects_readSimpleObject - 2019.03.07 at 12h 30m 18s.xml">
+      <configuration name="TestObjects.readSimpleObject" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestIdGen_ceateJWT - 2019.02.09 at 19h 26m 09s.xml">
-      <configuration name="TestIdGen.ceateJWT" configurationId="JUnit" />
+    <history-entry file="TestObjects_readSimpleObject - 2019.03.07 at 12h 30m 24s.xml">
+      <configuration name="TestObjects.readSimpleObject" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestIdGen_validateJWT - 2019.02.09 at 19h 27m 22s.xml">
-      <configuration name="TestIdGen.validateJWT" configurationId="JUnit" />
+    <history-entry file="TestObjects_readComplexObject - 2019.03.07 at 12h 31m 12s.xml">
+      <configuration name="TestObjects.readComplexObject" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestIdGen_validateJWTFailing - 2019.02.09 at 19h 28m 12s.xml">
-      <configuration name="TestIdGen.validateJWTFailing" configurationId="JUnit" />
+    <history-entry file="TestObjects_readComplexObjectGetter - 2019.03.07 at 12h 31m 40s.xml">
+      <configuration name="TestObjects.readComplexObjectGetter" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestIdGen_validateJWTFailing - 2019.02.09 at 19h 28m 56s.xml">
-      <configuration name="TestIdGen.validateJWTFailing" configurationId="JUnit" />
+    <history-entry file="All_in_hp-globalstate-core - 2019.03.07 at 14h 09m 54s.xml">
+      <configuration name="All in hp-globalstate-core" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestIdGen_validateJWT - 2019.02.09 at 19h 30m 30s.xml">
-      <configuration name="TestIdGen.validateJWT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestQuery_filterSingleFieldExists - 2019.02.19 at 21h 59m 22s.xml">
+    <history-entry file="TestQuery_filterSingleFieldExists - 2019.03.07 at 14h 13m 07s.xml">
       <configuration name="TestQuery.filterSingleFieldExists" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestState_sendAction - 2019.02.26 at 14h 13m 46s.xml">
-      <configuration name="TestState.sendAction" configurationId="JUnit" />
+    <history-entry file="TestQuery_filterSingleFieldExists - 2019.03.07 at 14h 14m 50s.xml">
+      <configuration name="TestQuery.filterSingleFieldExists" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestQuery_filterSingleFieldExists - 2019.03.07 at 14h 14m 58s.xml">
+      <configuration name="TestQuery.filterSingleFieldExists" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3361000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="25" width="2560" height="1362" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20405728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286424" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39900663" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286424" />
+      <window_info anchor="right" id="CDI" />
+      <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.1380597" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.10302307" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/FacetFilter.java">
@@ -557,11 +547,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/CoordsDistance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="465">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -606,16 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/GlobalState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/server/RESTController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -647,16 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -713,18 +680,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/RegExMatch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="120">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/IsNullOrEmpty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
         </state>
       </provider>
     </entry>
@@ -739,27 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="29" column="92" selection-start-line="29" selection-start-column="92" selection-end-line="29" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/FieldExists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -791,20 +730,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13-beta-1/junit-4.13-beta-1.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/CoordsDistanceInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="56" />
+        <state relative-caret-position="561">
+          <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/utils/TestValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestObjects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/FieldExists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/GlobalState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/IsNullOrEmpty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5853#5854#0" expanded="true" />
+            <element signature="e#5908#5909#0" expanded="true" />
+            <element signature="e#5981#5982#0" expanded="true" />
+            <element signature="e#6025#6026#0" expanded="true" />
+            <element signature="e#6102#6103#0" expanded="true" />
+            <element signature="e#6157#6158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+        <state relative-caret-position="195">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
