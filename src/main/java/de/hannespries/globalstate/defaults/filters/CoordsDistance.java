@@ -2,8 +2,6 @@ package de.hannespries.globalstate.defaults.filters;
 
 import de.hannespries.globalstate.FilterOperator;
 
-import java.util.Map;
-
 /**
  * the value has to be a map with the fields longitude and latitude
  */
@@ -27,11 +25,11 @@ public class CoordsDistance extends FilterOperator {
     @Override
     public boolean check(Object toCheckValue) {
         boolean result = false;
-        if(toCheckValue instanceof Map){
+        if(toCheckValue instanceof CoordsDistanceInterface){
             try{
-                Map map = (Map) toCheckValue;
-                double cLong = Double.parseDouble(map.get("longitude").toString());
-                double cLat = Double.parseDouble(map.get("latitude").toString());
+                CoordsDistanceInterface obj = (CoordsDistanceInterface) toCheckValue;
+                double cLong = obj.getLong();
+                double cLat = obj.getLat();
 
                 double theta = this.longitude - cLong;
                 double dist = Math.sin(Math.toRadians(this.latitude)) * Math.sin(Math.toRadians(cLat)) *
