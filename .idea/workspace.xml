@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c856072e-4ef3-42bc-a37d-c003be2cf5af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestObjects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/utils/TestValue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathWriter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/IsNullOrEmpty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="255">
               <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
             </state>
           </provider>
@@ -46,17 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5853#5854#0" expanded="true" />
-                <element signature="e#5908#5909#0" expanded="true" />
-                <element signature="e#5981#5982#0" expanded="true" />
-                <element signature="e#6025#6026#0" expanded="true" />
-                <element signature="e#6102#6103#0" expanded="true" />
-                <element signature="e#6157#6158#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -64,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+            <state relative-caret-position="391">
+              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,6 +154,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,16 +196,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="globalstate" type="462c0819:PsiDirectoryNode" />
               <item name="defaults" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hpglobalstate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hpglobalstate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="globalstate" type="462c0819:PsiDirectoryNode" />
-              <item name="defaults" type="462c0819:PsiDirectoryNode" />
-              <item name="filters" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hpglobalstate" type="b2602c69:ProjectViewProjectNode" />
@@ -272,12 +249,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551964506808" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551983730828" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/de/hannespries/globalstate" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../fm-server" />
     <property name="project.structure.last.edited" value="Project" />
@@ -302,11 +278,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestQuery.filterSingleFieldExists">
+  <component name="RunManager" selected="JUnit.All in hp-globalstate-core">
     <configuration name="All in hp-globalstate-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hp-globalstate-core" />
+      <module name="hpglobalstate" />
       <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -377,8 +356,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestQuery.filterSingleFieldExists" />
         <item itemvalue="JUnit.All in hp-globalstate-core" />
+        <item itemvalue="JUnit.TestQuery.filterSingleFieldExists" />
         <item itemvalue="JUnit.TestObjects.readComplexObjectGetter" />
         <item itemvalue="JUnit.TestObjects.readComplexObject" />
         <item itemvalue="JUnit.TestObjects.readSimpleObject" />
@@ -434,17 +413,15 @@
     <option name="totallyTimeSpent" value="3361000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="2560" height="1362" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20405728" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20842217" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286424" />
@@ -456,16 +433,17 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3286424" />
-      <window_info anchor="right" id="CDI" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.10302307" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.102878466" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="8" />
+      <window_info anchor="right" id="CDI" order="9" />
     </layout>
   </component>
   <component name="XDebuggerManager">
@@ -473,13 +451,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java</url>
-          <line>41</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java</url>
-          <line>23</line>
+          <line>18</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -754,32 +732,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/utils/TestValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#205#206#0" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestObjects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/utils/TestValue.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/de/hannespries/globalstate/TestObjects.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/FieldExists.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -803,31 +757,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/defaults/filters/IsNullOrEmpty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="255">
           <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/StateQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5853#5854#0" expanded="true" />
-            <element signature="e#5908#5909#0" expanded="true" />
-            <element signature="e#5981#5982#0" expanded="true" />
-            <element signature="e#6025#6026#0" expanded="true" />
-            <element signature="e#6102#6103#0" expanded="true" />
-            <element signature="e#6157#6158#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/hannespries/globalstate/utils/ObjectPathReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        <state relative-caret-position="391">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
