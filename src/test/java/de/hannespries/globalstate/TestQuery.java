@@ -11,11 +11,11 @@ public class TestQuery {
     @Test
     public void exists(){
         Map<String, Object> state = new HashMap<>();
-        Map<String, Object> artefact = new HashMap<>();
+        Map<String, Object> artifact = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
-        artefact.put("__id", id);
-        state.put(id, artefact);
+        artifact.put("__id", id);
+        state.put(id, artifact);
 
         Assert.assertTrue(StateQuery.exists(id, state));
     }
@@ -23,66 +23,66 @@ public class TestQuery {
     @Test
     public void findById(){
         Map<String, Object> state = new HashMap<>();
-        Map<String, Object> artefact = new HashMap<>();
+        Map<String, Object> artifact = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
-        artefact.put("__id", id);
-        state.put(id, artefact);
+        artifact.put("__id", id);
+        state.put(id, artifact);
 
         Map<String, Object> filtered = StateQuery.filterById(id, state);
 
         Assert.assertTrue(filtered.containsKey(id));
-        Assert.assertEquals(artefact, filtered.get(id));
+        Assert.assertEquals(artifact, filtered.get(id));
     }
 
     @Test
     public void mergeAdd(){
         Map<String, Object> state = new HashMap<>();
-        Map<String, Object> artefact = new HashMap<>();
+        Map<String, Object> artifact = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
-        artefact.put("__id", id);
+        artifact.put("__id", id);
 
-        StateQuery.merge(id, artefact, state);
+        StateQuery.merge(id, artifact, state);
 
         Assert.assertTrue(state.containsKey(id));
-        Assert.assertEquals(artefact, state.get(id));
+        Assert.assertEquals(artifact, state.get(id));
     }
 
     @Test
     public void mergeUpdate(){
         Map<String, Object> state = new HashMap<>();
-        Map<String, Object> artefact = new HashMap<>();
-        Map<String, Object> artefact2 = new HashMap<>();
+        Map<String, Object> artifact = new HashMap<>();
+        Map<String, Object> artifact2 = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
-        artefact.put("__id", id);
-        artefact2.put("__id", id + "xxx");
+        artifact.put("__id", id);
+        artifact2.put("__id", id + "xxx");
 
-        StateQuery.merge(id, artefact, state);
+        StateQuery.merge(id, artifact, state);
 
         Assert.assertTrue(state.containsKey(id));
-        Assert.assertEquals(artefact, state.get(id));
+        Assert.assertEquals(artifact, state.get(id));
 
-        StateQuery.merge(id, artefact2, state);
+        StateQuery.merge(id, artifact2, state);
 
         Assert.assertTrue(state.containsKey(id));
         Assert.assertEquals(1, state.size());
-        Assert.assertEquals(artefact2, state.get(id));
+        Assert.assertEquals(artifact2, state.get(id));
     }
 
     @Test
     public void filterSingle(){
         Map<String, Object> state = new HashMap<>();
-        Map<String, Object> artefact = new HashMap<>();
-        Map<String, Object> artefact2 = new HashMap<>();
+        Map<String, Object> artifact = new HashMap<>();
+        Map<String, Object> artifact2 = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
-        artefact.put("__id", id);
-        artefact2.put("__id", id + "xxx");
+        artifact.put("__id", id);
+        artifact2.put("__id", id + "xxx");
 
-        StateQuery.merge(id, artefact, state);
-        StateQuery.merge(id + "xxx", artefact2, state);
+        StateQuery.merge(id, artifact, state);
+        StateQuery.merge(id + "xxx", artifact2, state);
 
         Map<String, List<Object>> filter = new HashMap<>();
         List<Object> values = new ArrayList<>();
@@ -93,18 +93,18 @@ public class TestQuery {
 
         Assert.assertTrue(result.containsKey(id + "xxx"));
         Assert.assertEquals(1, result.size());
-        Assert.assertEquals(artefact2, result.get(id + "xxx"));
+        Assert.assertEquals(artifact2, result.get(id + "xxx"));
     }
 
     @Test
     public void filterSingle2(){
         Map<String, Object> state = new ConcurrentHashMap<>();
-        Map<String, Object> artefact = new HashMap<>();
+        Map<String, Object> artifact = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
-        artefact.put("__id", id + "xxx");
+        artifact.put("__id", id + "xxx");
 
-        StateQuery.merge(id + "xxx", artefact, state);
+        StateQuery.merge(id + "xxx", artifact, state);
 
         for(int i = 0; i < 2500; i++){
             Map<String, Object> art = new HashMap<>();
@@ -122,19 +122,19 @@ public class TestQuery {
 
         Assert.assertTrue(result.containsKey(id + "xxx"));
         Assert.assertEquals(1, result.size());
-        Assert.assertEquals(artefact, result.get(id + "xxx"));
+        Assert.assertEquals(artifact, result.get(id + "xxx"));
     }
 
     @Test
     public void filterSingleFieldExists(){
         Map<String, Object> state = new ConcurrentHashMap<>();
-        Map<String, Object> artefact = new HashMap<>();
+        Map<String, Object> artifact = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
-        artefact.put("__id", id + "xxx");
-        artefact.put("fieldX", "X");
+        artifact.put("__id", id + "xxx");
+        artifact.put("fieldX", "X");
 
-        StateQuery.merge(id + "xxx", artefact, state);
+        StateQuery.merge(id + "xxx", artifact, state);
 
         for(int i = 0; i < 2500; i++){
             Map<String, Object> art = new HashMap<>();
@@ -152,21 +152,21 @@ public class TestQuery {
 
         Assert.assertTrue(result.containsKey(id + "xxx"));
         Assert.assertEquals(1, result.size());
-        Assert.assertEquals(artefact, result.get(id + "xxx"));
+        Assert.assertEquals(artifact, result.get(id + "xxx"));
     }
 
     @Test
     public void filterBoth(){
         Map<String, Object> state = new HashMap<>();
-        Map<String, Object> artefact = new HashMap<>();
-        Map<String, Object> artefact2 = new HashMap<>();
+        Map<String, Object> artifact = new HashMap<>();
+        Map<String, Object> artifact2 = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
-        artefact.put("__id", id);
-        artefact2.put("__id", id + "xxx");
+        artifact.put("__id", id);
+        artifact2.put("__id", id + "xxx");
 
-        StateQuery.merge(id, artefact, state);
-        StateQuery.merge(id + "xxx", artefact2, state);
+        StateQuery.merge(id, artifact, state);
+        StateQuery.merge(id + "xxx", artifact2, state);
 
         Map<String, List<Object>> filter = new HashMap<>();
         List<Object> values = new ArrayList<>();
@@ -179,21 +179,21 @@ public class TestQuery {
         Assert.assertTrue(result.containsKey(id + "xxx"));
         Assert.assertTrue(result.containsKey(id));
         Assert.assertEquals(2, result.size());
-        Assert.assertEquals(artefact2, result.get(id + "xxx"));
+        Assert.assertEquals(artifact2, result.get(id + "xxx"));
     }
 
     @Test
     public void delete(){
         Map<String, Object> state = new HashMap<>();
-        Map<String, Object> artefact = new HashMap<>();
-        Map<String, Object> artefact2 = new HashMap<>();
+        Map<String, Object> artifact = new HashMap<>();
+        Map<String, Object> artifact2 = new HashMap<>();
 
         String id = UUID.randomUUID().toString();
-        artefact.put("__id", id);
-        artefact2.put("__id", id + "xxx");
+        artifact.put("__id", id);
+        artifact2.put("__id", id + "xxx");
 
-        StateQuery.merge(id, artefact, state);
-        StateQuery.merge(id + "xxx", artefact2, state);
+        StateQuery.merge(id, artifact, state);
+        StateQuery.merge(id + "xxx", artifact2, state);
 
         Map<String, List<Object>> filter = new HashMap<>();
         List<Object> values = new ArrayList<>();
@@ -208,6 +208,6 @@ public class TestQuery {
         Assert.assertTrue(result.containsKey(id + "xxx"));
         Assert.assertFalse(result.containsKey(id));
         Assert.assertEquals(1, result.size());
-        Assert.assertEquals(artefact2, result.get(id + "xxx"));
+        Assert.assertEquals(artifact2, result.get(id + "xxx"));
     }
 }

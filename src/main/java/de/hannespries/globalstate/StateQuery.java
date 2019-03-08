@@ -107,6 +107,17 @@ public class StateQuery {
 //        return result;
 //    }
 
+    public static Object query(String path, Map<String, Object> state){
+        Object obj = null;
+        try{
+            obj = ObjectPathReader.read(state, path);
+        }
+        catch(Exception e){
+
+        }
+        return obj;
+    }
+
     public static Map<String, Object> filterByIds(List<String> ids, Map<String, Object> state){
         Map<String, Object> result = new HashMap<>();
         for (String key : state.keySet()) {
@@ -123,12 +134,24 @@ public class StateQuery {
         return filterByIds(ids, state);
     }
 
+    public static Object findById(String id, Map<String, Object> state){
+        return query(id, state);
+    }
+
+    public static Object findById(Action action, Map<String, Object> state){
+        return query(action.getToken(), state);
+    }
+
     public static void merge(String id, Map<String, Object> artifact, Map<String, Object> state){
         state.put(id, artifact);
     }
 
     public static void merge(Action action,  Map<String, Object> state){
         merge(action.getToken(), action.getPayload(), state);
+    }
+
+    public static void merge(String id, Object artifact, Map<String, Object> state){
+        state.put(id, artifact);
     }
 
     public static boolean delete(String id, Map<String, Object> state){
@@ -138,6 +161,10 @@ public class StateQuery {
 
     public static boolean delete(Action action, Map<String, Object> state){
         return delete(action.getToken(), state);
+    }
+
+    public static boolean existsValue(String path, Map<String, Object> state){
+        return query(path, state) != null;
     }
 
     public static boolean exists(String id, Map<String, Object> state){
