@@ -6,15 +6,13 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Data
 public class GlobalState {
     private String idField = "__id";
+    private List<ActionDispatcher> dispatchers = new ArrayList<>();
     private List<Reducer> reducers= new ArrayList<>();
     private List<FacetFilter> facetFilters = new ArrayList<>();
     private List<StateChangeListener> changeListeners = new ArrayList<>();
@@ -27,6 +25,12 @@ public class GlobalState {
     public  Map<String, Object> action(Action action){
         if(this.idGenerator != null && (action.getToken() == null || action.getToken().length() == 0)){
             action.setToken(this.idGenerator.createId(action, this.state));
+        }
+
+        //TODO move idgeneration to one predefined dispatcher, added by constructor
+        Map<String, Object> stateUnmod = Collections.unmodifiableMap(this.state);
+        for (ActionDispatcher dispatcher: this.dispatchers) {
+            dispatcher.dispatch(action, stateUnmod); //a dispatcher can't modify the state
         }
 
         Map<String, Object> filtered = new HashMap<>();
